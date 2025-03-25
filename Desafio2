@@ -1,0 +1,20 @@
+public class StringUtils {
+
+    public static String concat(String str1, String str2) {
+        return str1 + str2;
+    }
+
+    public static String concat(String str, int num) {
+        return str + num;
+    }
+
+    public static String concat(int prefix, String str1, String str2) {
+        return prefix + str1 + str2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(concat("Olá, ", "pessoa!"));  
+        System.out.println(concat("Número: ", 100));     
+        System.out.println(concat(1, " - ", "Item"));   
+    }
+}
