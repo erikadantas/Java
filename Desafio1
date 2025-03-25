@@ -1,0 +1,22 @@
+public class Util {
+
+    public static int max(int a, int b) {
+        return (a > b) ? a : b;
+    }
+
+    public static double max(double a, double b) {
+        return (a > b) ? a : b;
+    }
+
+    public static int max(String a, String b) {
+        int num1 = Integer.parseInt(a);
+        int num2 = Integer.parseInt(b);
+        return max(num1, num2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(max(10, 20));         
+        System.out.println(max(5.5, 2.3));       
+        System.out.println(max("8", "12"));    
+    }
+}
