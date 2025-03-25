@@ -1,0 +1,31 @@
+public abstract class Figura {
+    public abstract void desenhar();
+}
+
+class Circulo extends Figura {
+    @Override
+    public void desenhar() {
+        System.out.println("Desenhando um Círculo.");
+    }
+}
+
+class Quadrado extends Figura {
+    @Override
+    public void desenhar() {
+        System.out.println("Desenhando um Quadrado.");
+    }
+}
+
+public class Desenho {
+    public static void desenharFigura(Figura figura) {
+        figura.desenhar();
+    }
+
+    public static void main(String[] args) {
+        Figura circulo = new Circulo();
+        Figura quadrado = new Quadrado();
+
+        desenharFigura(circulo);  
+        desenharFigura(quadrado); 
+    }
+}
