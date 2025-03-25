@@ -1,0 +1,31 @@
+public abstract class Notificacao {
+    public abstract void enviar();
+}
+
+class Email extends Notificacao {
+    @Override
+    public void enviar() {
+        System.out.println("Enviando notificação por Email.");
+    }
+}
+
+class SMS extends Notificacao {
+    @Override
+    public void enviar() {
+        System.out.println("Enviando notificação por SMS.");
+    }
+}
+
+public class NotificacaoTest {
+    public static void enviarNotificacao(Notificacao notificacao) {
+        notificacao.enviar();
+    }
+
+    public static void main(String[] args) {
+        Notificacao email = new Email();
+        Notificacao sms = new SMS();
+
+        enviarNotificacao(email); 
+        enviarNotificacao(sms);   
+    }
+}
