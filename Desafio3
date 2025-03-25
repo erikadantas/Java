@@ -1,0 +1,31 @@
+public abstract class FormaPagamento {
+    public abstract void processarPagamento();
+}
+
+class CartaoCredito extends FormaPagamento {
+    @Override
+    public void processarPagamento() {
+        System.out.println("Pagamento processado via Cartão de Crédito.");
+    }
+}
+
+class Boleto extends FormaPagamento {
+    @Override
+    public void processarPagamento() {
+        System.out.println("Pagamento processado via Boleto.");
+    }
+}
+
+public class PagamentoTest {
+    public static void realizarPagamento(FormaPagamento pagamento) {
+        pagamento.processarPagamento();
+    }
+
+    public static void main(String[] args) {
+        FormaPagamento pagamento1 = new CartaoCredito();
+        FormaPagamento pagamento2 = new Boleto();
+
+        realizarPagamento(pagamento1);  
+        realizarPagamento(pagamento2); 
+    }
+}
